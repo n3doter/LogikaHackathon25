@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo-container .logo {
+    width: 120px;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    padding-top: 80px; 
+}
+
+/* Про игру */
+.about-game {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-game h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-game p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Скріншоти */
+.screenshots {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.screenshots h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.footer p {
+    margin: 0;
+}

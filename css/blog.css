@@ -68,3 +68,44 @@ body {
     color: #000;
 }
 
+.update-log {
+    background: rgba(255, 255, 255, 0.1); /* Тіньова поверхня для списку */
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    margin-bottom: 30px;
+}
+
+.update-log h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.update-log ul {
+    list-style-type: none; /* без стандартних маркерів */
+    padding-left: 0;
+}
+
+.update-log li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #ccc;
+    transition: background 0.3s ease;
+}
+
+.update-log li:last-child {
+    border-bottom: none;
+}
+
+.update-log li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.update-log strong {
+    color: #fff;
+}
