@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фентезі Сюжет</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inventory.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <audio autoplay loop hidden>
+        <source src="music/nocturnal-fantasy-enchanted-loop-284212.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--menushka-->
+    <div id="burgerMenu" class="burger-menu hidden">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#aboutModal" class="open-modal">Про гру</a></li>
+            <li><a href="#encyclopediaModal" class="open-modal">Історія</a></li>
+            <li><a href="blog.html">Блог</a></li>
+        </ul>
+    </div>
+    <div id="burgerIcon" class="burger-icon">
+        &#9776; 
+    </div>
+    <section id="story">
+        <div id="background" class="background"></div>
+        <p id="storyText">Ти прокидаєшся в темному лісі. Перед тобою два шляхи:</p>
+        <div class="choices">
+            <button id="castleBtn">Йти до замку</button>
+            <button id="caveBtn">Йти до печери</button>
+        </div>
+        
+        <button id="openInventory" class="inventory-btn">Інвентар</button>
+    </section>
+<!--charakteristiki hero-->
+    <div id="hero-stats-bar">
+        <div class="stat-item">
+            <img src="" alt="Health">
+            <span id="stat-health">100</span>
+        </div>
+        <div class="stat-item">
+            <img src="" alt="Strength">
+            <span id="stat-strength">5</span>
+        </div>
+        <div class="stat-item">
+            <img src="" alt="Intelligence">
+            <span id="stat-intelligence">5</span>
+        </div>
+        <div class="stat-item">
+            <img src="" alt="Charisma">
+            <span id="stat-charisma">5</span>
+        </div>
+    </div>
+
+    <!--Modalne Window Inventory-->
+    <div id="inventoryModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Інвентар</h2>
+            <div id="inventoryItems" class="inventory-items">
+                
+            </div>
+            <button id="closeInventoryBtn">Закрити</button>
+        </div>
+    </div>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/inventory.js"></script>
+    <script src="scripts/changeBackground.js"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>
