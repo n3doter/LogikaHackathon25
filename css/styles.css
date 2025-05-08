@@ -1,105 +1,202 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Uncial Antiqua', cursive;
+    background: url('https://raw.githubusercontent.com/n3doter/LogikaHackathon25/main/images/cave.png') center/cover no-repeat;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
-
-
 .navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
+    background: #343a40;
+    color: #ffffff;
+    padding: 25px 60px;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 1000;
-}
-
-.navbar .logo-container .logo {
-    width: 120px;
+    border-bottom: 2px solid #6c757d;
+    box-shadow: 0 0 10px rgba(108, 117, 125, 0.5);
 }
 
 .main-nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 80px;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .main-nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.4em;
+    transition: 0.4s ease;
+    position: relative;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #dee2e6, #ced4da);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
 }
 
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
 main {
-    padding-top: 80px; 
+    margin: 0;
+    padding-top: 120px;
 }
 
-/* Про игру */
 .about-game {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 60px 20px;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .about-game h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(108, 117, 125, 0.4);
 }
 
 .about-game p {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.5em;
+    color: #ffffff;
 }
 
-/* Скріншоти */
 .screenshots {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 80px 20px;
+    animation: fadeIn 2s ease-in;
 }
 
 .screenshots h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 2.6em;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .gallery {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .gallery img {
-    width: 250px;
-    height: 150px;
+    width: 360px;
+    height: 220px;
     object-fit: cover;
+    border: 5px groove #adb5bd;
     border-radius: 10px;
+    box-shadow: 0 0 15px rgba(108, 117, 125, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(108, 117, 125, 0.6);
+}
 
 .footer {
-    background-color: #333;
-    color: white;
+    background: #343a40;
+    color: #ffffff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 30px 20px;
+    font-size: 1em;
     width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 500;
+    border-top: 2px solid #6c757d;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #adb5bd;
 }
 
 .footer p {
-    margin: 0;
+    margin: 6px 0;
+}
+
+.start-btn {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #adb5bd, #ced4da);
+    border: 2px solid #adb5bd;
+    border-radius: 10px;
+    color: #212529;
+    font-size: 1.1em;
+    box-shadow: 0 0 15px #adb5bd;
+    transition: all 0.3s ease;
+    animation: pulseGlow 2.8s infinite;
+}
+
+.start-btn:hover {
+    background: linear-gradient(145deg, #ced4da, #adb5bd);
+    box-shadow: 0 0 25px #ced4da;
+    color: #343a40;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    margin: 80px 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.info-box {
+    max-width: 800px;
+    background: rgba(33, 37, 41, 0.8); 
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.info-box h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 15px #adb5bd; }
+    50% { box-shadow: 0 0 25px #ced4da; }
+    100% { box-shadow: 0 0 15px #adb5bd; }
 }
