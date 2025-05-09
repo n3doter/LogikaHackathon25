@@ -3,9 +3,9 @@ let closeInventoryBtn = document.getElementById("closeInventoryBtn");
 let inventoryModal = document.getElementById("inventoryModal");
 // Речi в Iнвенторi
 let inventory = [
-    { id: 1, name: "Меч", image: "", description: "Меч для бою." },
-    { id: 2, name: "Лікувальний еліксир", image: "images/potion.png", description: "Відновлює 50 HP." },
-    { id: 3, name: "Кристал часу", image: "images/crystal.png", description: "Використовувати для зміни часу." }
+    { id: 1, name: "Меч", image: "images/sword.png", description: "Меч для бою." },
+    { id: 2, name: "Лікувальний еліксир", image: "images/elexir.png", description: "Відновлює 50 HP." },
+    { id: 3, name: "Кристал часу", image: "images/time.png", description: "Використовувати для зміни часу." }
 ];
 
 // Відкриття модального вікна інвентаря

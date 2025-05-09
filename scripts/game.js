@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let storyText = document.getElementById("storyText");
     let castleBtn = document.getElementById("castleBtn");
     let caveBtn = document.getElementById("caveBtn");
-    
+    //stats
     let stats = {
         strength: 5,
         intelligence: 5,
         charisma: 5,
         health: 100,
     };
-
+//vidnovlennya stats
     function updateStatsDisplay() {
         document.getElementById("stat-strength").textContent = stats.strength;
         document.getElementById("stat-intelligence").textContent = stats.intelligence;
@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.addEventListener("DOMContentLoaded", updateStatsDisplay);
-
+//start for castle
     castleBtn.addEventListener("click", () => {
         storyText.innerHTML = "Ти опинився перед величним замком, навколо якого витає таємнича аура. Що ти робитимеш?";
         setChoices("castle");
     });
-
+//start for cave
     caveBtn.addEventListener("click", () => {
         storyText.innerHTML = "Вхід до темної печери манить тебе, шепочучи древні таємниці. Куди підеш далі?";
         setChoices("cave");
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
 
         };
-
+//netu prodolzhenya = end
         if (choicesMap[path]) {
             choicesMap[path].forEach(choice => {
                 let btn = document.createElement("button");
@@ -809,7 +809,7 @@ document.addEventListener("DOMContentLoaded", function () {
             endStory();
         }
     }
-
+// pochatu story spochatku
     function endStory() {
         let choicesDiv = document.querySelector(".choices");
         choicesDiv.innerHTML = "";
