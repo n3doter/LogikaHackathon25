@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Of The World Of Shadows</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -57,16 +58,28 @@
                 <button data-bg="castle">Замок</button>
             </div>
         </section>
+        <section class="quiz-intro">
+    <div class="quiz-intro-box">
+        <h2>🧙 Пройди Фентезі-Квіз</h2>
+        <p>Дізнайся, хто ти у світі тіней — відважний воїн, мудрий маг чи хитрий розвідник?</p>
+    </div>
+</section>
+
+        <section id="quiz" class="quiz-section">
+    <h2 id="question-text">Завантаження питання...</h2>
+    <div id="answers"></div>
+    <div id="quiz-result" class="info-box"></div>
+  </section>
         
         <footer class="footer">
             <p>&copy; 2025 Legends Of The World Of Shadows. Усі права захищено.</p>
             <div class="social-links">
-                <a href="https://www.youtube.com/@warum1I" target="_blank">YouTube</a> |
-                <a href="https://discord.gg/" target="_blank">Discord</a>
+                <a href="https://www.youtube.com/@warum1I" target="_blank">YouTube</a>
             </div>
             
         </footer>
 
  <script src="scripts/sitegroundchange.js"></script>
+ <script src="scripts/quiz.js"></script>
 </body>
 </html>
